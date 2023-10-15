@@ -129,3 +129,8 @@ type WithQueryPagination = {
     offset?: number;
   };
 };
+
+export type FetchFunction = <T extends keyof Endpoints>(
+  key: T,
+  parameters: Endpoints[T]["parameters"],
+) => Promise<Endpoints[T]["data"]>;
