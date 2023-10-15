@@ -1,6 +1,6 @@
 {
   "name": "@bgoff1/pokeapi-types",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Typescript types for the PokeAPI. For more information go to https://pokeapi.co/docs/v2.",
   "keywords": [
     "PokeAPI",
@@ -13,7 +13,7 @@
     "email": "judahgoff@gmail.com"
   },
   "repository": {
-    "url": "https://github.com/bgoff1/pokeapi-types"
+    "url": "git+https://github.com/bgoff1/pokeapi-types.git"
   },
   "license": "MIT",
   "author": {
@@ -23,7 +23,8 @@
   },
   "main": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc -p ."
+    "build": "tsc -p .",
+    "prepublish": "tsc -p ."
   },
   "lint-staged": {
     "*.{ts,json}": "prettier --write"
