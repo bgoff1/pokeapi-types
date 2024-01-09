@@ -50,30 +50,30 @@ import { Stat } from "./pokeapi/pokemon/stat";
 import { Language } from "./pokeapi/languages/language";
 
 type PaginatedEndpoints = {
+  ability: Ability;
   berry: Berry;
   "berry-firmness": BerryFirmness;
   "berry-flavor": BerryFlavor;
-  "contest-type": ContestType;
+  characteristic: Characteristic;
   "contest-effect": ContestEffect;
-  "super-contest-effect": SuperContestEffect;
-  "encounter-method": EncounterMethod;
+  "contest-type": ContestType;
+  "egg-group": EggGroup;
   "encounter-condition": EncounterCondition;
   "encounter-condition-value": EncounterConditionValue;
+  "encounter-method": EncounterMethod;
   "evolution-chain": EvolutionChain;
   "evolution-trigger": EvolutionTrigger;
+  gender: Gender;
   generation: Generation;
-  pokedex: Pokedex;
-  version: Version;
-  "version-group": VersionGroup;
+  "growth-rate": GrowthRate;
   item: Item;
   "item-attribute": ItemAttribute;
   "item-category": ItemCategory;
   "item-fling-effect": ItemFlingEffect;
   "item-pocket": ItemPocket;
+  language: Language;
   location: Location;
   "location-area": LocationArea;
-  "pal-park-area": PalParkArea;
-  region: Region;
   machine: Machine;
   move: Move;
   "move-ailment": MoveAilment;
@@ -82,22 +82,22 @@ type PaginatedEndpoints = {
   "move-damage-class": MoveDamageClass;
   "move-learn-method": MoveLearnMethod;
   "move-target": MoveTarget;
-  ability: Ability;
-  characteristic: Characteristic;
-  "egg-group": EggGroup;
-  gender: Gender;
-  "growth-rate": GrowthRate;
   nature: Nature;
+  "pal-park-area": PalParkArea;
   "pokeathlon-stat": PokeathlonStat;
+  pokedex: Pokedex;
   pokemon: Pokemon;
   "pokemon-color": PokemonColor;
   "pokemon-form": PokemonForm;
   "pokemon-habitat": PokemonHabitat;
   "pokemon-shape": PokemonShape;
   "pokemon-species": PokemonSpecies;
+  region: Region;
   stat: Stat;
+  "super-contest-effect": SuperContestEffect;
   type: Type;
-  language: Language;
+  version: Version;
+  "version-group": VersionGroup;
 };
 
 export type Endpoints = {
@@ -115,7 +115,13 @@ export type Endpoints = {
     data: LocationAreaEncounter;
     parameters: WithPathID;
   };
+  "/": {
+    data: Record<keyof PaginatedEndpoints, string>; 
+    parameters: Record<string, never>;
+  }
 };
+
+export type EndpointKey = keyof Endpoints;
 
 type WithPathID = {
   path: {
@@ -130,7 +136,7 @@ type WithQueryPagination = {
   };
 };
 
-export type FetchFunction = <T extends keyof Endpoints>(
+export type FetchFunction = <T extends EndpointKey>(
   key: T,
   parameters: Endpoints[T]["parameters"],
 ) => Promise<Endpoints[T]["data"]>;
