@@ -1,7 +1,7 @@
-import { Description } from "../common/description";
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { Description } from "../common/description";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface Characteristic {
+export type Characteristic = {
   /** The identifier for this resource. */
   id: number;
   /** The remainder of the highest stat/IV divided by 5. */
@@ -12,4 +12,4 @@ export interface Characteristic {
   highest_stat: NamedAPIResource;
   /** The descriptions of this characteristic listed in different languages. */
   descriptions: Description[];
-}
+};

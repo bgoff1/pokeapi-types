@@ -1,7 +1,7 @@
-import { NamedAPIResource } from "../common/named-api-resource";
-import { PokemonSpeciesGender } from "./pokemon-species-gender";
+import type { NamedAPIResource } from "../common/named-api-resource";
+import type { PokemonSpeciesGender } from "./pokemon-species-gender";
 
-export interface Gender {
+export type Gender = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -10,4 +10,4 @@ export interface Gender {
   pokemon_species_details: PokemonSpeciesGender[];
   /** A list of Pokémon species that required this gender in order for a Pokémon to evolve into them. */
   required_for_evolution: NamedAPIResource[];
-}
+};

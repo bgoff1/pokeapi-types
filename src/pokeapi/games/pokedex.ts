@@ -1,9 +1,9 @@
-import { Description } from "../common/description";
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
-import { PokemonEntry } from "./pokemon-entry";
+import type { Description } from "../common/description";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
+import type { PokemonEntry } from "./pokemon-entry";
 
-export interface Pokedex {
+export type Pokedex = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -20,4 +20,4 @@ export interface Pokedex {
   region: NamedAPIResource;
   /** A list of version groups this Pokédex is relevant to. */
   version_groups: NamedAPIResource[];
-}
+};

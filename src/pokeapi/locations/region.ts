@@ -1,7 +1,7 @@
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface Region {
+export type Region = {
   /** The identifier for this resource. */
   id: number;
   /** A list of locations that can be found in this region. */
@@ -16,4 +16,4 @@ export interface Region {
   pokedexes: NamedAPIResource[];
   /** A list of version groups where this region can be visited. */
   version_groups: NamedAPIResource[];
-}
+};

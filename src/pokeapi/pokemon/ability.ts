@@ -1,11 +1,11 @@
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
-import { VerboseEffect } from "../common/verbose-effect";
-import { AbilityEffectChange } from "./ability-effect-change";
-import { AbilityFlavorText } from "./ability-flavor-text";
-import { AbilityPokemon } from "./ability-pokemon";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
+import type { VerboseEffect } from "../common/verbose-effect";
+import type { AbilityEffectChange } from "./ability-effect-change";
+import type { AbilityFlavorText } from "./ability-flavor-text";
+import type { AbilityPokemon } from "./ability-pokemon";
 
-export interface Ability {
+export type Ability = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -24,4 +24,4 @@ export interface Ability {
   flavor_text_entries: AbilityFlavorText[];
   /** A list of Pokémon that could potentially have this ability. */
   pokemon: AbilityPokemon[];
-}
+};

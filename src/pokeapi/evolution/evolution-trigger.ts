@@ -1,7 +1,7 @@
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface EvolutionTrigger {
+export type EvolutionTrigger = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -10,4 +10,4 @@ export interface EvolutionTrigger {
   names: Name[];
   /** A list of pokemon species that result from this evolution trigger. */
   pokemon_species: NamedAPIResource[];
-}
+};

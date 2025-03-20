@@ -1,7 +1,7 @@
-import { NamedAPIResource } from "../common/named-api-resource";
-import { VerboseEffect } from "../common/verbose-effect";
+import type { NamedAPIResource } from "../common/named-api-resource";
+import type { VerboseEffect } from "../common/verbose-effect";
 
-export interface PastMoveStatValues {
+export type PastMoveStatValues = {
   /** The percent value of how likely this move is to be successful. */
   accuracy: number;
   /** The percent value of how likely it is this moves effect will take effect. */
@@ -16,4 +16,4 @@ export interface PastMoveStatValues {
   type: NamedAPIResource;
   /** The version group in which these move stat values were in effect. */
   version_group: NamedAPIResource;
-}
+};

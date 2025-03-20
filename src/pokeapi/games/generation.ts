@@ -1,7 +1,7 @@
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface Generation {
+export type Generation = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -20,4 +20,4 @@ export interface Generation {
   types: NamedAPIResource[];
   /** A list of version groups that were introduced in this generation. */
   version_groups: NamedAPIResource[];
-}
+};

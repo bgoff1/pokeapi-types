@@ -1,6 +1,6 @@
-import { Name } from "../common/name";
+import type { Name } from "../common/name";
 
-export interface EncounterMethod {
+export type EncounterMethod = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -9,4 +9,4 @@ export interface EncounterMethod {
   order: number;
   /** The name of this resource listed in different languages. */
   names: Name[];
-}
+};

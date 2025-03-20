@@ -1,7 +1,7 @@
-import { Description } from "../common/description";
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { Description } from "../common/description";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface MoveCategory {
+export type MoveCategory = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -10,4 +10,4 @@ export interface MoveCategory {
   moves: NamedAPIResource[];
   /** The description of this resource listed in different languages. */
   descriptions: Description[];
-}
+};

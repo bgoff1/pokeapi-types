@@ -1,7 +1,7 @@
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface ItemCategory {
+export type ItemCategory = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -12,4 +12,4 @@ export interface ItemCategory {
   names: Name[];
   /** The pocket items in this category would be put in. */
   pocket: NamedAPIResource;
-}
+};

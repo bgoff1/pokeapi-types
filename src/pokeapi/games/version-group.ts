@@ -1,6 +1,6 @@
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface VersionGroup {
+export type VersionGroup = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -17,4 +17,4 @@ export interface VersionGroup {
   regions: NamedAPIResource;
   /** The versions this version group owns. */
   versions: NamedAPIResource;
-}
+};

@@ -1,6 +1,6 @@
-import { NamedAPIResource } from "./named-api-resource";
+import type { NamedAPIResource } from "./named-api-resource";
 
-export interface Encounter {
+export type Encounter = {
   /** The lowest level the Pokémon could be encountered at. */
   min_level: number;
   /** The highest level the Pokémon could be encountered at. */
@@ -11,4 +11,4 @@ export interface Encounter {
   chance: number;
   /** The method by which this encounter happens. */
   method: NamedAPIResource;
-}
+};

@@ -1,6 +1,6 @@
-import { Name } from "../common/name";
+import type { Name } from "../common/name";
 
-export interface Language {
+export type Language = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -13,4 +13,4 @@ export interface Language {
   iso3166: string;
   /** The name of this resource listed in different languages. */
   names: Name[];
-}
+};

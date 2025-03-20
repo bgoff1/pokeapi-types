@@ -1,6 +1,6 @@
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface MoveMetaData {
+export type MoveMetaData = {
   /** The status ailment this move inflicts on its target. */
   ailment: NamedAPIResource;
   /** The category of move this move falls under, e.g. damage or ailment. */
@@ -25,4 +25,4 @@ export interface MoveMetaData {
   flinch_chance: number;
   /** The likelihood this attack will cause a stat change in the target Pokémon. */
   stat_chance: number;
-}
+};

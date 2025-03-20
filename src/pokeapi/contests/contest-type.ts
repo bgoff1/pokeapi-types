@@ -1,7 +1,7 @@
-import { ContestName } from "./contest-name";
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { ContestName } from "./contest-name";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface ContestType {
+export type ContestType = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -10,4 +10,4 @@ export interface ContestType {
   berry_flavor: NamedAPIResource;
   /** The name of this contest type listed in different languages. */
   names: ContestName[];
-}
+};

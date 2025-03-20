@@ -1,8 +1,8 @@
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
-import { AwesomeName } from "./awesome-name";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
+import type { AwesomeName } from "./awesome-name";
 
-export interface PokemonShape {
+export type PokemonShape = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -13,4 +13,4 @@ export interface PokemonShape {
   names: Name[];
   /** A list of the Pokémon species that have this shape. */
   pokemon_species: NamedAPIResource[];
-}
+};

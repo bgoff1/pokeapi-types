@@ -1,9 +1,9 @@
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
-import { PokemonFormSprites } from "./pokemon-form-sprites";
-import { PokemonFormType } from "./pokemon-form-type";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
+import type { PokemonFormSprites } from "./pokemon-form-sprites";
+import type { PokemonFormType } from "./pokemon-form-type";
 
-export interface PokemonForm {
+export type PokemonForm = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -32,4 +32,4 @@ export interface PokemonForm {
   names: Name[];
   /** The form specific form name of this Pokémon form, or empty if the form does not have a specific name. */
   form_names: Name[];
-}
+};

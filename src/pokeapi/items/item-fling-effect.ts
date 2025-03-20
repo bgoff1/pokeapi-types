@@ -1,7 +1,7 @@
-import { Effect } from "../common/effect";
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { Effect } from "../common/effect";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface ItemFlingEffect {
+export type ItemFlingEffect = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -10,4 +10,4 @@ export interface ItemFlingEffect {
   effect_entries: Effect[];
   /** A list of items that have this fling effect. */
   items: NamedAPIResource[];
-}
+};

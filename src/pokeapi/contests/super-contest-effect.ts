@@ -1,7 +1,7 @@
-import { FlavorText } from "../common/flavor-text";
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { FlavorText } from "../common/flavor-text";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface SuperContestEffect {
+export type SuperContestEffect = {
   /** The identifier for this resource. */
   id: number;
   /** The level of appeal this super contest effect has. */
@@ -10,4 +10,4 @@ export interface SuperContestEffect {
   flavor_text_entries: FlavorText[];
   /** A list of moves that have the effect when used in super contests. */
   moves: NamedAPIResource[];
-}
+};

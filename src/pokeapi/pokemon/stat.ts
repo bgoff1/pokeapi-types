@@ -1,10 +1,10 @@
-import { APIResource } from "../common/api-resource";
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
-import { MoveStatAffectSets } from "./move-stat-affect-sets";
-import { NatureStatAffectSets } from "./nature-stat-affect-sets";
+import type { APIResource } from "../common/api-resource";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
+import type { MoveStatAffectSets } from "./move-stat-affect-sets";
+import type { NatureStatAffectSets } from "./nature-stat-affect-sets";
 
-export interface Stat {
+export type Stat = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -23,4 +23,4 @@ export interface Stat {
   move_damage_class: NamedAPIResource;
   /** The name of this resource listed in different languages. */
   names: Name[];
-}
+};

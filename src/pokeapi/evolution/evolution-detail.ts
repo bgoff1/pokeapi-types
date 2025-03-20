@@ -1,6 +1,6 @@
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface EvolutionDetail {
+export type EvolutionDetail = {
   /** The item required to cause evolution this into Pokémon species. */
   item: NamedAPIResource;
   /** The type of event that triggers evolution into this Pokémon species. */
@@ -37,4 +37,4 @@ export interface EvolutionDetail {
   trade_species: NamedAPIResource;
   /** Whether or not the 3DS needs to be turned upside-down as this Pokémon levels up. */
   turn_upside_down: boolean;
-}
+};

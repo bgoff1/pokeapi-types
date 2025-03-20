@@ -1,8 +1,8 @@
-import { Description } from "../common/description";
-import { NamedAPIResource } from "../common/named-api-resource";
-import { GrowthRateExperienceLevel } from "./growth-rate-experience-level";
+import type { Description } from "../common/description";
+import type { NamedAPIResource } from "../common/named-api-resource";
+import type { GrowthRateExperienceLevel } from "./growth-rate-experience-level";
 
-export interface GrowthRate {
+export type GrowthRate = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -15,4 +15,4 @@ export interface GrowthRate {
   levels: GrowthRateExperienceLevel[];
   /** A list of Pokémon species that gain levels at this growth rate. */
   pokemon_species: NamedAPIResource[];
-}
+};

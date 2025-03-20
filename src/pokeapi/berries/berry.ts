@@ -1,7 +1,7 @@
-import { BerryFlavorMap } from "./berry-flavor-map";
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { BerryFlavorMap } from "./berry-flavor-map";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface Berry {
+export type Berry = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -26,4 +26,4 @@ export interface Berry {
   item: NamedAPIResource;
   /** The type inherited by "Natural Gift" when used with this Berry. */
   natural_gift_type: NamedAPIResource;
-}
+};

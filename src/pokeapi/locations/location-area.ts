@@ -1,9 +1,9 @@
-import { EncounterMethodRate } from "./encounter-method-rate";
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
-import { PokemonEncounter } from "./pokemon-encounter";
+import type { EncounterMethodRate } from "./encounter-method-rate";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
+import type { PokemonEncounter } from "./pokemon-encounter";
 
-export interface LocationArea {
+export type LocationArea = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -18,4 +18,4 @@ export interface LocationArea {
   names: Name[];
   /** A list of Pokémon that can be encountered in this area along with version specific details about the encounter. */
   pokemon_encounters: PokemonEncounter[];
-}
+};

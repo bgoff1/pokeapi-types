@@ -1,7 +1,7 @@
-import { EvolutionDetail } from "./evolution-detail";
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { EvolutionDetail } from "./evolution-detail";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface ChainLink {
+export type ChainLink = {
   /** Whether or not this link is for a baby Pokémon. This would only ever be true on the base link. */
   is_baby: boolean;
   /** The Pokémon species at this point in the evolution chain. */
@@ -10,4 +10,4 @@ export interface ChainLink {
   evolution_details: EvolutionDetail[];
   /** A List of chain objects. */
   evolves_to: ChainLink[];
-}
+};

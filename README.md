@@ -11,29 +11,24 @@ To install, run one of the following, depending on your preferred node package m
 After you've installed it, you can use it in your project like this:
 
 ```typescript
-import { Endpoints } from '@bgoff1/pokeapi-types';
+import { Endpoints } from "@bgoff1/pokeapi-types";
 ```
 
 ## Endpoints and FetchFunction
+
 Endpoints is a helper type that maps the endpoint to the response type.
 
 FetchFunction is another helper type that is a function that takes an endpoint and the parameters, and gives the return type. This will give you intellisense, and the inferred return type based on the first argument.
 
 ```typescript
-import type { FetchFunction } from '@bgoff1/pokeapi-types';
+import type { FetchFunction } from "@bgoff1/pokeapi-types";
 
 // implementation omitted
 let myFetch: FetchFunction;
 
-const bulbasaur = await myFetch(
-  '/pokemon/:id',
-  { path: { id: 'bulbasaur' }}
-);
+const bulbasaur = await myFetch("/pokemon/:id", { path: { id: "bulbasaur" } });
 
-const fireType = await myFetch(
-  '/type/:id',
-  { path: { id: 'fire' }}
-);
+const fireType = await myFetch("/type/:id", { path: { id: "fire" } });
 
 bulbasaur;
 // ^? const bulbasaur: Pokemon

@@ -1,7 +1,7 @@
-import { Name } from "../common/name";
-import { NaturePokeathlonStatAffectSets } from "./nature-pokeathlon-stat-affect-sets";
+import type { Name } from "../common/name";
+import type { NaturePokeathlonStatAffectSets } from "./nature-pokeathlon-stat-affect-sets";
 
-export interface PokeathlonStat {
+export type PokeathlonStat = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -10,4 +10,4 @@ export interface PokeathlonStat {
   names: Name[];
   /** A detail of natures which affect this Pokéathlon stat positively or negatively. */
   affecting_natures: NaturePokeathlonStatAffectSets;
-}
+};

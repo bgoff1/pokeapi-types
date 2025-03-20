@@ -1,8 +1,8 @@
-import { Description } from "../common/description";
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { Description } from "../common/description";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface MoveLearnMethod {
+export type MoveLearnMethod = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -13,4 +13,4 @@ export interface MoveLearnMethod {
   names: Name[];
   /** A list of version groups where moves can be learned through this method. */
   version_groups: NamedAPIResource[];
-}
+};

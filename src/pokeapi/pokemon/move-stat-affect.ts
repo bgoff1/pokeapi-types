@@ -1,8 +1,8 @@
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface MoveStatAffect {
+export type MoveStatAffect = {
   /** The maximum amount of change to the referenced stat. */
   change: number;
   /** The move causing the change. */
   move: NamedAPIResource;
-}
+};

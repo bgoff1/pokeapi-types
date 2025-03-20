@@ -1,6 +1,6 @@
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface Machine {
+export type Machine = {
   /** The identifier for this resource. */
   id: number;
   /** The TM or HM item that corresponds to this machine. */
@@ -9,4 +9,4 @@ export interface Machine {
   move: NamedAPIResource;
   /** The version group that this machine applies to. */
   version_group: NamedAPIResource;
-}
+};

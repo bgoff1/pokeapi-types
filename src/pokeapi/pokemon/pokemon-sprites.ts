@@ -1,4 +1,4 @@
-export interface PokemonSprites {
+export type PokemonSprites = {
   /** The default depiction of this Pokémon from the front in battle. */
   front_default: string | null;
   /** The shiny depiction of this Pokémon from the front in battle. */
@@ -15,4 +15,4 @@ export interface PokemonSprites {
   back_female: string | null;
   /** The shiny female depiction of this Pokémon from the back in battle. */
   back_shiny_female: string | null;
-}
+};

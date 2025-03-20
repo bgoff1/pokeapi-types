@@ -1,9 +1,9 @@
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
-import { MoveBattleStylePreference } from "./move-battle-style-preference";
-import { NatureStatChange } from "./nature-stat-change";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
+import type { MoveBattleStylePreference } from "./move-battle-style-preference";
+import type { NatureStatChange } from "./nature-stat-change";
 
-export interface Nature {
+export type Nature = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -22,4 +22,4 @@ export interface Nature {
   move_battle_style_preferences: MoveBattleStylePreference[];
   /** The name of this resource listed in different languages. */
   names: Name[];
-}
+};

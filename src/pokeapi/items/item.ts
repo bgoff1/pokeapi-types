@@ -1,14 +1,14 @@
-import { APIResource } from "../common/api-resource";
-import { GenerationGameIndex } from "../common/generation-game-index";
-import { ItemHolderPokemon } from "./item-holder-pokemon";
-import { ItemSprites } from "./item-sprites";
-import { MachineVersionDetail } from "../common/machine-version-detail";
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
-import { VerboseEffect } from "../common/verbose-effect";
-import { VersionGroupFlavorText } from "../common/version-group-flavor-text";
+import type { APIResource } from "../common/api-resource";
+import type { GenerationGameIndex } from "../common/generation-game-index";
+import type { ItemHolderPokemon } from "./item-holder-pokemon";
+import type { ItemSprites } from "./item-sprites";
+import type { MachineVersionDetail } from "../common/machine-version-detail";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
+import type { VerboseEffect } from "../common/verbose-effect";
+import type { VersionGroupFlavorText } from "../common/version-group-flavor-text";
 
-export interface Item {
+export type Item = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -39,4 +39,4 @@ export interface Item {
   baby_trigger_for: APIResource;
   /** A list of the machines related to this item. */
   machines: MachineVersionDetail[];
-}
+};

@@ -1,6 +1,6 @@
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface TypeRelations {
+export type TypeRelations = {
   /** A list of types this type has no effect on. */
   no_damage_to: NamedAPIResource;
   /** A list of types this type is not very effect against. */
@@ -13,4 +13,4 @@ export interface TypeRelations {
   half_damage_from: NamedAPIResource;
   /** A list of types that are very effective against this type. */
   double_damage_from: NamedAPIResource;
-}
+};

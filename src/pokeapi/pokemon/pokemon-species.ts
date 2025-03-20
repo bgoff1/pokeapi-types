@@ -8,7 +8,7 @@ import type { PalParkEncounterArea } from "./pal-park-encounter-area";
 import type { PokemonSpeciesDexEntry } from "./pokemon-species-dex-entry";
 import type { PokemonSpeciesVariety } from "./pokemon-species-variety";
 
-export interface PokemonSpecies {
+export type PokemonSpecies = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -63,4 +63,4 @@ export interface PokemonSpecies {
   genera: Genus[];
   /** A list of the Pokémon that exist within this Pokémon species. */
   varieties: PokemonSpeciesVariety[];
-}
+};

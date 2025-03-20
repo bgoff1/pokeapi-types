@@ -8,7 +8,7 @@ import type { PokemonType } from "./pokemon-type";
 import type { PokemonTypePast } from "./pokemon-type-past";
 import type { VersionGameIndex } from "../common/version-game-index";
 
-export interface Pokemon {
+export type Pokemon = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -45,4 +45,4 @@ export interface Pokemon {
   stats: PokemonStat[];
   /** A list of details showing types this Pokémon has. */
   types: PokemonType[];
-}
+};

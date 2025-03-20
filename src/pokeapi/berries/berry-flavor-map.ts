@@ -1,8 +1,8 @@
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface BerryFlavorMap {
+export type BerryFlavorMap = {
   /** How powerful the referenced flavor is for this berry. */
   potency: number;
   /** The referenced berry flavor. */
   flavor: NamedAPIResource;
-}
+};

@@ -1,16 +1,16 @@
-import { APIResource } from "../common/api-resource";
-import { MachineVersionDetail } from "../common/machine-version-detail";
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
-import { AbilityEffectChange } from "../pokemon/ability-effect-change";
-import { VerboseEffect } from "../common/verbose-effect";
-import { ContestComboSets } from "./contest-combo-sets";
-import { MoveFlavorText } from "./move-flavor-text";
-import { MoveMetaData } from "./move-meta-data";
-import { MoveStatChange } from "./move-stat-change";
-import { PastMoveStatValues } from "./past-move-stat-values";
+import type { APIResource } from "../common/api-resource";
+import type { MachineVersionDetail } from "../common/machine-version-detail";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
+import type { AbilityEffectChange } from "../pokemon/ability-effect-change";
+import type { VerboseEffect } from "../common/verbose-effect";
+import type { ContestComboSets } from "./contest-combo-sets";
+import type { MoveFlavorText } from "./move-flavor-text";
+import type { MoveMetaData } from "./move-meta-data";
+import type { MoveStatChange } from "./move-stat-change";
+import type { PastMoveStatValues } from "./past-move-stat-values";
 
-export interface Move {
+export type Move = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -59,4 +59,4 @@ export interface Move {
   target: NamedAPIResource;
   /** The elemental type of this move. */
   type: NamedAPIResource;
-}
+};

@@ -1,8 +1,8 @@
-import { Description } from "../common/description";
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { Description } from "../common/description";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface ItemAttribute {
+export type ItemAttribute = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -13,4 +13,4 @@ export interface ItemAttribute {
   names: Name[];
   /** The description of this item attribute listed in different languages. */
   descriptions: Description[];
-}
+};

@@ -1,8 +1,8 @@
-import { GenerationGameIndex } from "../common/generation-game-index";
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { GenerationGameIndex } from "../common/generation-game-index";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface Location {
+export type Location = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -15,4 +15,4 @@ export interface Location {
   game_indices: GenerationGameIndex[];
   /** Areas that can be found within this location. */
   areas: NamedAPIResource[];
-}
+};

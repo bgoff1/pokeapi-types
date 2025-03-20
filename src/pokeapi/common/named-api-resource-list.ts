@@ -1,6 +1,6 @@
 import type { NamedAPIResource } from "./named-api-resource";
 
-export interface NamedAPIResourceList {
+export type NamedAPIResourceList = {
   /** The total number of resources available from this API. */
   count: number;
   /** The URL for the next page in the list. */
@@ -9,4 +9,4 @@ export interface NamedAPIResourceList {
   previous: string;
   /** A list of named API resources. */
   results: NamedAPIResource[];
-}
+};

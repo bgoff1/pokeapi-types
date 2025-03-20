@@ -1,10 +1,10 @@
-import { NamedAPIResource } from "../common/named-api-resource";
+import type { NamedAPIResource } from "../common/named-api-resource";
 
-export interface ContestName {
+export type ContestName = {
   /** The name for this contest. */
   name: string;
   /** The color associated with this contest's name. */
   color: string;
   /** The language that this name is in. */
   language: NamedAPIResource;
-}
+};

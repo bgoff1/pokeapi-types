@@ -1,11 +1,12 @@
-import { GenerationGameIndex } from "../common/generation-game-index";
-import { Name } from "../common/name";
-import { NamedAPIResource } from "../common/named-api-resource";
-import { TypePokemon } from "./type-pokemon";
-import { TypeRelations } from "./type-relations";
-import { TypeRelationsPast } from "./type-relations-past";
+import type { GenerationGameIndex } from "../common/generation-game-index";
+import type { Name } from "../common/name";
+import type { NamedAPIResource } from "../common/named-api-resource";
+import type { TypePokemon } from "./type-pokemon";
+import type { TypeRelations } from "./type-relations";
+import type { TypeRelationsPast } from "./type-relations-past";
+import type { TypeSprite } from "./type-sprite";
 
-export interface Type {
+export type Type = {
   /** The identifier for this resource. */
   id: number;
   /** The name for this resource. */
@@ -26,4 +27,6 @@ export interface Type {
   pokemon: TypePokemon[];
   /** A list of moves that have this type. */
   moves: NamedAPIResource[];
-}
+  /** A map of generation to the sprites for this type */
+  sprites: Record<string, Record<string, TypeSprite>>;
+};
