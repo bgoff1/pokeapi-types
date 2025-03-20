@@ -1,6 +1,6 @@
 {
   "name": "@bgoff1/pokeapi-types",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Typescript types for the PokeAPI. For more information go to https://pokeapi.co/docs/v2.",
   "keywords": [
     "PokeAPI",
