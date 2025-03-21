@@ -125,4 +125,4 @@ export * from "./pokeapi/pokemon/type-relations";
 export * from "./pokeapi/pokemon/type-relations-past";
 export * from "./pokeapi/pokemon/type-sprite";
 
-export * from './pokeapi/types';
+export * from "./pokeapi/types";
