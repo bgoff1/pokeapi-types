@@ -10,11 +10,11 @@ export type VersionGroup = {
   /** The generation this version was introduced in. */
   generation: NamedAPIResource;
   /** A list of methods in which Pokémon can learn moves in this version group. */
-  move_learn_methods: NamedAPIResource;
+  move_learn_methods: NamedAPIResource[];
   /** A list of Pokédexes introduces in this version group. */
-  pokedexes: NamedAPIResource;
+  pokedexes: NamedAPIResource[];
   /** A list of regions that can be visited in this version group. */
-  regions: NamedAPIResource;
+  regions: NamedAPIResource[];
   /** The versions this version group owns. */
-  versions: NamedAPIResource;
+  versions: NamedAPIResource[];
 };
