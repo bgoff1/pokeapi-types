@@ -112,7 +112,7 @@ export type Endpoints = {
   };
 } & {
   "/pokemon/:id/encounters": {
-    data: LocationAreaEncounter;
+    data: LocationAreaEncounter[];
     parameters: WithPathID;
   };
   "/": {
